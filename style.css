@@ -1,0 +1,1449 @@
+/*
+Theme Name: Valley Church
+Theme URI: http://valleychurch.eu
+Version: 1.0
+Author: Rick Butterfield
+*/
+
+/* Props to @csswizardry/csswizardry.com for this awesome css magic! */
+
+/*------------------------------------*\
+	$RESET
+\*------------------------------------*/
+/*
+A more considered reset; more of a restart... As per: csswizardry.com/2011/10/reset-restarted
+*/
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,
+a,abbr,address,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strong,sub,sup,tt,var,
+b,u,i,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video
+{
+	margin: 0;
+	padding: 0;
+}
+article,aside,details,figcaption,figure,footer,
+header,hgroup,menu,nav,section
+{
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-size: 100%;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+strong, b, mark
+{
+	font-weight: bold;
+	font-style: inherit;
+}
+
+em, i, cite, q, address, dfn, var
+{
+	font-style: italic;
+	font-weight: inherit;
+}
+
+abbr[title], dfn[title]
+{
+	cursor: help;
+	border-bottom: 1px dotted;
+}
+
+ins
+{
+	border-bottom: 1px solid;
+}
+
+a, u, ins
+{
+	text-decoration: none;
+}
+
+del, s
+{
+	text-decoration: line-through;
+}
+
+pre, code, samp, kbd
+{
+	font-family: "Consolas", "Monaco", monospace;
+}
+
+small
+{
+	font-size: 0.75rem;
+}
+
+img
+{
+	border: none;
+	font-style: italic;
+	/*display: block;*/
+	max-width: 100%;
+	-ms-interpolation-mode: bicubic;
+	height: auto;
+}
+
+input,
+select, option, optgroup,
+textarea
+{
+	font: inherit;
+}
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+
+
+/*------------------------------------*\
+	$SHARED
+\*------------------------------------*/
+/* Common margin-bottom for vertical rhythm. */
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+p,
+table,
+form,
+pre,
+hr,
+.source
+{
+	margin-bottom: 16px;
+}
+
+/* Default indentation value for lists etc. */
+ul, ol, dd
+{
+	margin-left: 24px;
+}
+
+label,
+.text-input,
+textarea,
+.btn
+{
+	cursor: pointer;
+}
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus
+{
+	cursor: text;
+}
+
+.nomargin
+{
+	margin: 0px 0px 0px 0px;
+}
+
+.nobtmmargin
+{
+	margin-bottom: 0px;
+}
+
+.wf-loading
+{
+    visibility: hidden;
+}
+
+.wf-active
+{
+    visibility: visible;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$CLEARFIX
+\*------------------------------------*/
+/*
+Big up @necolas: nicolasgallagher.com/micro-clearfix-hack
+*/
+.media:before,
+.media:after,
+.island:before,
+.island:after,
+.islet:before,
+.islet:after,
+.cf:before,
+.cf:after
+{
+	content: "";
+	display: table;
+}
+
+.media:after,
+.island:after,
+.islet:after,
+.cf:after
+{
+	clear: both;
+}
+
+.media,
+.island,
+.islet,
+.cf
+{
+	zoom: 1;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$MAIN
+\*------------------------------------*/
+html
+{
+	overflow-y: scroll;
+	font-size: 1em;
+	line-height: 1.5; /* A safe and comfortable default for body copy at any size. */
+	padding-bottom: 32px;
+}
+
+body
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	background: #f1f1f1;
+  border-top: 4px solid #333;
+}
+
+.wrap
+{
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.floatLeft
+{
+	float: left;
+}
+
+.floatRight
+{
+	float: right;
+}
+
+.paddedContent
+{
+	padding: 24px;
+}
+
+.paddedContentNarrow
+{
+	width: 100%;
+	margin: 0 auto;
+	padding: 24px;
+	max-width: 729px;
+}
+
+.ie7 .paddedContentNarrow,
+.ie8 .paddedContentNarrow
+{
+	width: auto;
+}
+
+footer
+{
+	color: #333;
+	padding: 0 0 16px 0;
+	text-align: center;
+}
+
+.footerText 
+{
+	text-align: left;
+}
+
+.footerLinks
+{
+	width: 378px;
+	margin: 2px 0;
+}
+
+.ie6 .footerLinks,
+.ie7 .footerLinks
+{
+	width: 390px;
+}
+
+.more-link
+{
+    color: white;
+    background: #006892;
+    padding: 8px 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 16px 0 0 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.more-link:hover,
+.more-link:focus,
+.more-link:active
+{
+    color: white;
+    background: #00546B;
+    text-decoration: none;
+}
+
+hr
+{
+    border: none;
+    border-bottom: 1px solid #CCC;
+    background: #CCC;
+    color: #CCC; //IE fix
+}
+
+.tinyScreen
+{
+	display: none;
+}
+
+.ccc-inner h2
+{
+	line-height: 17px;
+}
+
+.gallery-icon img
+{
+  width: 95%;
+}
+
+
+
+/*------------------------------------*\
+	$HEADER
+\*------------------------------------*/
+
+header
+{
+	margin: 0 0 8px 0;
+	background: #f1f1f1; /* this means that if the body has a bg (Wigan, 6HW) the header is still consistent */
+	padding: 4px 0 4px 0;
+}
+
+.headerTop
+{
+	/*border-bottom: 1px solid #CCC;*/
+	padding: 4px 1px 8px 1px;
+	margin: 4px auto 0px auto;
+	display: none;
+}
+
+.headerLinks
+{
+	margin: 0;
+	list-style-type: none;
+	font-size: 12px;
+	font-size: 0.750rem;
+	display: none;
+}
+
+.headerLinks .current
+{
+	font-weight: bold;
+}
+
+.headerLinks a
+{
+	text-decoration: none;
+	color: #888;
+}
+
+.headerLinks a:hover
+{
+	color: #333;
+}
+
+.headerLinks li
+{
+	float: left;
+	padding: 8px 16px 9px 0;
+}
+
+.headerSocial
+{
+	font-size: 0;
+}
+
+.headerSocial img
+{
+	margin: 0 4px 0 0;
+}
+
+.no-svg .icon img
+{
+	visibility: hidden;
+}
+
+.icon
+{
+	float: left;
+}
+
+.no-svg .icon
+{
+	display: inline-block;
+	margin: 0 4px 0 0;
+	width: 32px;
+	height: 32px;
+}
+
+.no-svg .facebook
+{
+	background: url('images/icons/fb.png') 0 0 no-repeat;
+}
+
+.no-svg .twitter
+{
+	background: url('images/icons/twtr.png') 0 0 no-repeat;
+}
+
+.no-svg .instagram
+{
+	background: url('images/icons/ig.png') 0 0 no-repeat;
+}
+
+.no-svg .rss
+{
+	background: url('images/icons/rss.png') 0 0 no-repeat;
+}
+
+.no-svg .podcast
+{
+	background: url('images/icons/podcast.png') 0 0 no-repeat;
+}
+
+.headerSearch
+{
+	zoom: 1;
+	*display: inline;
+	margin: 0 0 0 2px;
+}
+
+.headerSearch input.field
+{
+	height: 32px;
+	padding: 0 0 0 8px;
+	font-family: sans-serif;
+	font-size: 12px;
+	font-size: 0.750rem;
+	float: left;
+	border: 1px solid #CCC;
+	border-right: none;
+	width: 164px;
+	-webkit-appearance: none;
+	-webkit-border-radius: 2px 0 0 2px;
+	-moz-border-radius: 2px 0 0 2px;
+	border-radius: 2px 0 0 2px;
+}
+
+.ie7 .headerSearch input.field
+{
+	height: 22px;
+	padding: 8px 0 0 8px;
+}
+
+.ie8 .headerSearch input.field
+{
+	padding: 6px 0 0 8px;
+}
+
+.headerSearch input.field:focus
+{
+	border-color: #333;
+	outline: 0;
+}
+
+.headerSearch input.field:focus > .headerSearch input.submit
+{
+	background-color: #333;
+	cursor: pointer;
+}
+
+.headerSearch input.submit
+{
+	background: #888 url('images/icons/search.svg') center center no-repeat;
+	background-size: 16px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	width: 32px;
+	height: 32px;
+	float: left;
+	color: white;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0 2px 2px 0;
+	-moz-border-radius:  0 2px 2px 0;
+	border-radius:  0 2px 2px 0;
+	text-indent: -999em;
+	text-transform: capitalize;
+}
+
+.no-svg .headerSearch input.submit
+{
+	background-image: url('images/icons/search.png');
+}
+
+.headerSearch input.submit:hover
+{
+	background-color: #333;
+	cursor: pointer;
+}
+
+.headerMain
+{
+	padding: 4px;
+}
+
+.headerLogo
+{
+	font-size: 0;
+	margin: 7px 1px 6px;
+}
+
+.no-svg .headerLogo
+{
+	width: 300px;
+	height: 47px;
+	background: url('images/valleychurchlogodark.png') 0 0 no-repeat;
+}
+
+.ie9 .headerLogo img
+{
+	height: 47px;
+}
+
+.no-svg .headerLogo img
+{
+	visibility: hidden;
+}
+
+header nav ul
+{
+	list-style-type: none;
+	margin: 0;
+}
+
+header nav ul li {
+	margin: 0 0 0 1px;
+	float: left;
+	position: relative;
+	z-index: 5;
+	padding: 21px 10px 20px 10px;
+	color: #333333;
+}
+
+header nav ul li:hover
+{
+	padding: 21px 10px 16px 10px;
+	background: #333333;
+	cursor: pointer;
+}
+
+header nav ul li:hover > a,
+header nav ul li:hover > a:hover,
+header nav ul li:hover > a:active,
+header nav ul li:hover > a:focus
+{
+	border-bottom: 4px solid white;
+	text-decoration: none;
+	color: #FFF;
+}
+
+header nav ul li a
+{
+	color: #333333;
+	font-family: "proxima-nova-n7", "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1;
+	display: block;
+	text-decoration: none;
+	padding: 0 0 3px 0;
+}
+
+header nav ul li a:hover
+{
+	text-decoration: none;
+}
+
+header nav ul li a:active,
+header nav ul li a:focus
+{
+	color: white;
+	background: #333;
+	text-decoration: none;
+}
+
+li.menu-item:hover > ul.sub-menu
+{
+	display: block;
+}
+
+header nav ul li ul
+{
+	display: none;
+	position: absolute;
+	background: #333333;
+	top: 60px;
+	left: 0px;
+	padding: 2px 0 8px 0;
+}
+
+header nav ul li.menu-last ul
+{
+	right: 0px;
+	left: -112px;
+}
+
+header nav ul li ul li
+{
+	padding: 0 8px;
+}
+
+header nav ul li ul li:hover
+{
+	padding: 0 8px;
+}
+
+header nav ul li ul li:hover > a
+{
+	border-bottom: 4px solid #FFF;
+	padding: 8px 0 5px 0;
+}
+
+header nav ul li ul li a
+{
+	width: 160px;
+	border-bottom: 1px solid #FFF;
+	font-size: 15px;
+	font-size: 0.938rem;
+	font-family: "proxima-nova-n4", "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: #FFF;
+	padding: 8px 0;
+	margin: 2px 0;
+}
+
+header nav ul li ul li a:active
+{
+	color: #FFF;
+	background: #333;
+}
+
+select.touchdown
+{
+  display: none;
+}
+
+
+
+
+/*------------------------------------*\
+	$HOME
+\*------------------------------------*/
+
+.homeSlider
+{
+	font-size: 0;
+	margin: 0 auto 24px auto;
+}
+
+.rslides_container
+{
+	position: relative;
+}
+
+.rslides
+{
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li
+{
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child
+{
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img
+{
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+
+.rslides_nav
+{
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 40px;
+	height: 40px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	margin-top: -20px;
+}
+
+.rslides_nav:hover,
+.rslides_nav:focus
+{
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+.rslides_nav:active
+{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.rslides_nav.prev
+{
+	left: 4px;
+	background: url('images/icons/nav_left.svg') center center no-repeat;
+	background-size: 32px;
+}
+
+.rslides_nav.next
+{
+	right: 4px;
+	background: url('images/icons/nav_right.svg') center center no-repeat;
+	background-size: 32px;
+}
+
+.no-svg .rslides_nav.prev
+{
+	background-image: url('images/icons/nav_left.png');
+}
+
+.no-svg .rslides_nav.next
+{
+	background-image: url('images/icons/nav_right.png');
+}
+
+.homeButtons
+{
+	margin-bottom: 24px;
+}
+
+.homeButton1, .homeButton2, .homeButton3
+{
+	position: relative;
+	height: 140px;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+}
+
+.ie7 .homeButton1, .ie7 .homeButton2, .ie7 .homeButton3,
+.ie8 .homeButton1, .ie8 .homeButton2, .ie8 .homeButton3
+{
+	background-position: 0 0;
+}
+
+.homeButton1 a,
+.homeButton1 a:hover,
+.homeButton2 a,
+.homeButton2 a:hover,
+.homeButton3 a,
+.homeButton3 a:hover
+{
+	text-decoration: none;
+}
+
+.homeButton1
+{
+	width: 478px;
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner1_0.jpg');
+	margin: 0 24px 0 0;
+	float: left;
+}
+
+.ie8 .homeButton1, .ie7 .homeButton1, .ie6 .homeButton1
+{
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner1ie.jpg');
+}
+
+.homeButton2
+{
+	width: 227px;
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner2_0.jpg');
+	margin: 0 24px 0 0;
+	float: left;
+}
+
+.ie8 .homeButton2, .ie7 .homeButton2, .ie6 .homeButton2
+{
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner2ie.jpg');
+}
+
+.homeButton3
+{
+	width: 227px;
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner3_0.jpg');
+	float: left;
+}
+
+.ie8 .homeButton3, .ie7 .homeButton3, .ie6 .homeButton3
+{
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner3ie.jpg');
+}
+
+.homeBannerText
+{
+	display: block;
+	width: 100%;
+	min-height: 140px;
+}
+
+.homeBannerTextInner
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #333333;
+	background: rgba(0,0,0,0.75);
+	padding: 4px 8px;
+	width: 100%;
+	font-size: 30px;
+	font-size: 1.875rem;
+	color: white;
+	font-family: "proxima-nova-n7", "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	text-rendering: optimizeLegibility;
+	line-height: 34px;
+}
+
+.homeBannerTextInner .zeta.lite
+{
+	color: white;
+}
+
+/*
+.homeBannerText:hover > span
+{
+	background: #333;
+}
+*/
+
+
+
+
+/*------------------------------------*\
+	$PAGE / $PODCAST
+\*------------------------------------*/
+
+.pageContent
+{
+	/*border: 1px solid #CCC;*/
+	margin-bottom: 24px;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.eventsLeft
+{
+	width: 660px;
+}
+
+.eventsRight
+{
+	width: 304px;
+}
+
+.eventEntry
+{
+	margin-bottom: 16px;
+}
+
+.calImg img
+{
+	width: 100%;
+	height: auto;
+}
+
+.pageImage
+{
+	font-size: 0px;
+	line-height: 0px;
+}
+
+.pageMain
+{
+	background: #ffffff;
+}
+
+.pageTitle
+{
+	margin-bottom: 16px;
+}
+
+.pageInfo
+{
+	margin-bottom: 16px;
+}
+
+.pageBody img
+{
+	max-width: 681px;
+	height: auto;
+}
+
+.pageBody input[type="text"], .pageBody textarea
+{
+	width: 100%;
+}
+
+.podcastImage
+{
+	width: 200px;
+	padding: 24px 0 24px 24px;
+	font-size: 0;
+}
+
+.podcastImage img
+{
+	width: 100%;
+	height: auto;
+	max-width: 200px;
+}
+
+.podcastInfo
+{
+	width: 708px;
+}
+
+
+
+
+/*------------------------------------*\
+    $TYPE
+\*------------------------------------*/
+/*--- SCALE ---*/
+/*
+As per csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+*/
+
+/* Large */
+.giga
+{
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 56px;
+}
+
+.mega
+{
+  font-size: 44px;
+  font-size: 2.750rem;
+  line-height: 52px;
+}
+
+.kilo
+{
+  font-size: 40px;
+  font-size: 2.500rem;
+  line-height: 48px;
+}
+
+.giga,
+.mega,
+.kilo
+{
+  letter-spacing: -1px;
+}
+
+/* Headings */
+/* Generic heading class, as per: jsfiddle.net/csswizardry/yFQDP */
+
+h1, .alpha
+{
+  font-size: 36px;
+  font-size: 2.250rem;
+  line-height: 44px;
+}
+
+h2, .beta
+{
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 40px;
+}
+
+h3, .gamma
+{
+  font-size: 28px;
+  font-size: 1.750rem;
+  line-height: 36px;
+}
+
+h4, .delta
+{
+  font-size: 24px;
+  font-size: 1.500rem;
+  line-height: 32px;
+}
+
+h5, .epsilon
+{
+  font-size: 20px;
+  font-size: 1.250rem;
+  line-height: 28px;
+}
+
+h6, .zeta
+{
+  font-size: 20px;
+  font-size: 1.250rem;
+  line-height: 24px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.alpha, .beta, .gamma, .delta, .epsilon, .zeta
+{
+	color: #333333;
+	font-family: "proxima-nova-n7", "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	text-rendering: optimizelegibility;
+}
+
+/* Small */
+small,
+.milli
+{
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 18px;
+}
+
+/* Different weights */
+.lite
+{
+	font-family: "proxima-nova-n3", "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+.heavy
+{
+	font-family: "proxima-nova-n3", "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+}
+
+/*--- LINKS ---*/
+a
+{
+	color: #006892;
+	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+}
+
+a:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+	color: #00546B;
+}
+
+a:focus,
+a:active
+{
+	color: white;
+	background: #006892;
+}
+
+/*--- LISTS ---*/
+li > ul,
+li > ol
+{
+	margin-bottom:0;
+}
+
+/*--- QUOTES ---*/
+/*
+Big up @boblet: html5doctor.com/blockquote-q-cite
+*/
+q{ quotes:"‘" "’" "“" "”"; }
+
+q:before{ content:"‘"; content:open-quote; }
+q:after{ content:"’"; content:close-quote; }
+
+q q:before{ content: "“"; content: open-quote; }
+q q:after{ content: "”"; content: close-quote; }
+
+blockquote{ quotes: "“" "”"; }
+blockquote p:before{ content: "“"; content: open-quote; }
+blockquote p:after{ content: ""; content: no-close-quote; }
+blockquote p:last-of-type:after{ content: "”"; content: close-quote; }
+
+blockquote
+{
+	margin: 10px 10px 24px 10px;
+	padding: 10px 10px 1px 10px;
+	background: #F1F1F1;
+	border-left: 5px solid #333;
+	font-style: italic;
+}
+
+.source
+{
+	display: block;
+	text-indent: 0;
+	margin-top: -16px;
+	margin-bottom: 10px;
+}
+
+.source:before
+{
+	content: "—";
+}
+
+
+
+
+
+/*------------------------------------*\
+	$MISC
+\*------------------------------------*/
+.accessibility
+{
+	position: absolute;
+	left: -99999px;
+}
+
+[dir=rtl] .accessibility
+{
+	left: auto;
+	right: -99999px;
+}
+
+::selection
+{
+	background: #0078AE;
+	color: white;
+}
+
+/*
+Helper class to carry brand colours etc as per speakerdeck.com/u/csswizardry/p/breaking-good-habits?slide=31
+*/
+.brand,
+.hero
+{
+	color: #2b5d8f;
+}
+
+
+
+/*------------------------------------*\
+	$MEDIA
+\*------------------------------------*/
+
+@media screen and (max-width: 980px)
+{
+	.pageImage img, .homeSlider img, .podcastImage, .podcastInfo
+	{
+ 		width: 100%; 
+	}
+
+  .headerTop
+  {
+  	padding: 4px 8px 8px 8px;
+  }
+
+	.headerMain
+  {
+  	padding: 1px 8px;
+	}
+
+	.homeSlider
+	{
+  	margin-bottom: 0;
+	}
+
+	.homeButton1, .homeButton2
+	{
+  	margin: 0;
+	}
+  
+	.homeButton1
+	{
+		width: 50%;
+	}  	
+  
+	.homeButton2, .homeButton3
+	{
+  	width: 25%;
+	}
+
+	.pageContent
+	{
+  	border: none;
+	}
+
+	.podcastImage
+	{
+  	padding: 24px;
+  	text-align: center;
+	}
+
+	.eventsLeft, .eventsRight
+	{
+		width: 100%;
+		float: none;
+	}
+
+	footer
+	{
+		padding: 0 8px 16px 8px;
+	}
+
+	.footerText
+	{
+		margin: 0 0 8px 0;
+	}
+
+	.footerText, .footerLinks
+	{
+		text-align: center;
+		float: none;
+		width: 100%;
+	}
+
+	.footerLinks
+	{
+		margin: 0 auto;
+		max-width: 270px;
+	}
+
+	.headerSocial
+	{
+		width: 100%;
+		text-align: center;
+		margin: 0 0 8px 0;
+		float: none;
+	}
+
+	.headerSearch
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 196px;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 900px)
+{
+  header
+  {
+    margin: 0;
+  }
+  
+  .homeButton1
+  {
+    width: 100%;
+    float: none;
+  }
+  
+  .homeButton2, .homeButton3
+  {
+    width: 50%;
+  }
+  
+  ul.touchdown-list
+  {
+    display: none;
+  }
+  
+  select.touchdown
+  {
+    float: right;
+    display: block;
+    margin: 18px 0 19px 0;
+  }
+}
+
+@media screen and (max-width: 670px)
+{
+	.homeButton1, .homeButton2, .homeButton3
+	{
+		width: 100%;
+	}
+  
+	.headerLogo
+	{
+  	float: none;
+ 		text-align: center;
+		margin: 8px auto;
+		max-width: 300px;
+		width: 100%;
+	}
+
+	.headerLogo img
+	{
+		width: 100%;
+		height: auto;
+	}
+
+	.headerTop
+	{
+		display: none;
+	}
+  
+	header nav
+	{	
+  	float: none !important;
+  	width: 100%;
+  	text-align: center;
+	}
+    
+	select.touchdown
+	{
+  	float: none;
+  	margin: 4px auto;
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.rslides_nav
+	{
+		top: auto;
+		bottom: 5%;
+	}
+  
+  .giga
+	{
+	  font-size: 34px;
+	  font-size: 2.125rem;
+	  line-height: 42px;
+	}
+
+	.mega
+	{
+	  font-size: 32px;
+	  font-size: 2rem;
+	  line-height: 40px;
+	}
+
+	.kilo
+	{
+	  font-size: 30px;
+	  font-size: 1.875rem;
+	  line-height: 38px;
+	}
+
+	.giga,
+	.mega,
+	.kilo
+	{
+	  letter-spacing: -1px;
+	}
+
+	h1, .alpha
+	{
+	  font-size: 28px;
+	  font-size: 1.750rem;
+	  line-height: 36px;
+	}
+
+	h2, .beta
+	{
+	  font-size: 26px;
+	  font-size: 1.625rem;
+	  line-height: 34px;
+	}
+
+	h3, .gamma
+	{
+	  font-size: 24px;
+	  font-size: 1.500rem;
+	  line-height: 32px;
+	}
+
+	h4, .delta
+	{
+	  font-size: 22px;
+	  font-size: 1.375rem;
+	  line-height: 30px;
+	}
+
+	h5, .epsilon,
+	h6, .zeta
+	{
+	  font-size: 20px;
+	  font-size: 1.250rem;
+	  line-height: 28px;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+	.tinyScreen
+	{
+		display: block;
+	}
+
+	.homeBannerTextInner
+	{
+		line-height: 26px;
+	}
+}
