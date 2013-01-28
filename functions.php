@@ -3,7 +3,7 @@
 //Valley CDN url
 function valleycdn() {
 	global $valleycdn;
-	$valleycdn = "http://valleychurch.eu/wp-content/themes/valleychurch";
+	$valleycdn = "http://cdn.valleychurch.eu";
 	return $valleycdn;
 }
 
