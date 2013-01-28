@@ -8,8 +8,8 @@
 		<p class="nobtmmargin">
 			<a href="http://freemethodist.org.uk" target="_blank">A Free Methodist UK Church</a> / <a href="http://www.charity-commission.gov.uk/Showcharity/RegisterOfCharities/CharityWithoutPartB.aspx?RegisteredCharityNumber=1125080&SubsidiaryNumber=0" target="_blank">Registered Charity No. 1125080</a> / <a href="/privacy" title="Privacy Policy">Privacy &amp; Cookie Policy</a></p>
 	</div>
-	<div class="footerLinks floatRight">
-		<div class="headerSocial floatLeft">
+	<div class="footerLinks floatRight cf">
+		<div class="headerSocial floatLeft cf">
 			<a class="icon facebook" href="http://facebook.com/wearevalleychurch" target="_blank">
 				<img src="<?php echo valleycdn(); ?>/images/icons/fb.svg" alt="Valley Church on Facebook" title="Valley Church on Facebook" width="32"/>
 			</a>
@@ -26,14 +26,13 @@
 				<img src="<?php echo valleycdn(); ?>/images/icons/podcast.svg" alt="Valley Church on iTunes" title="Valley Church on iTunes" width="32"/>
 			</a>
 		</div>
-		<div class="headerSearch floatRight">
+		<div class="headerSearch floatRight cf">
 			<?php get_search_form(); ?>
 		</div>
 	</div>
 </footer>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.32/responsiveslides.min.js"></script>
 <script type="text/javascript" src="<?php echo valleycdn(); ?>/js/jquery.touchdown.min.js"></script>
 <script type="text/javascript" src="<?php echo valleycdn(); ?>/js/jquery.fitvids.js"></script>

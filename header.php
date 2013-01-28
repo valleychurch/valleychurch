@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- RUNNING ON IIS -->
 <!--[if IE 6]>
 <html class="ie6" <?php language_attributes(); ?>>
 <![endif]-->
@@ -50,6 +51,8 @@
 
   <link rel="shortcut icon" href="<?php echo valleycdn(); ?>/images/icons/favicon.ico" />
   <link rel="apple-touch-icon" href="<?php echo valleycdn(); ?>/images/icons/apple-touch-icon.png" />
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
   <script type="text/javascript" src="//use.typekit.net/xja0ipy.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>

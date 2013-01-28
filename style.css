@@ -1,7 +1,7 @@
 /*
 Theme Name: Valley Church
 Theme URI: http://valleychurch.eu
-Version: 1.0
+Version: 1.5
 Author: Rick Butterfield
 */
 
@@ -803,39 +803,39 @@ select.touchdown
 .homeButton1
 {
 	width: 478px;
-	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner1_0.jpg');
+	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner1_0.jpg');
 	margin: 0 24px 0 0;
 	float: left;
 }
 
 .ie8 .homeButton1, .ie7 .homeButton1, .ie6 .homeButton1
 {
-	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner1ie.jpg');
+	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner1ie.jpg');
 }
 
 .homeButton2
 {
 	width: 227px;
-	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner2_0.jpg');
+	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner2_0.jpg');
 	margin: 0 24px 0 0;
 	float: left;
 }
 
 .ie8 .homeButton2, .ie7 .homeButton2, .ie6 .homeButton2
 {
-	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner2ie.jpg');
+	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner2ie.jpg');
 }
 
 .homeButton3
 {
 	width: 227px;
-	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner3_0.jpg');
+	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner3_0.jpg');
 	float: left;
 }
 
 .ie8 .homeButton3, .ie7 .homeButton3, .ie6 .homeButton3
 {
-	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner3ie.jpg');
+	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner3ie.jpg');
 }
 
 .homeBannerText
@@ -1276,10 +1276,11 @@ Helper class to carry brand colours etc as per speakerdeck.com/u/csswizardry/p/b
 
 	.headerSocial
 	{
-		width: 100%;
+		width: 184px;
 		text-align: center;
-		margin: 0 0 8px 0;
+		margin: 0 auto 8px auto;
 		float: none;
+		padding: 0 0 0 4px;
 	}
 
 	.headerSearch
@@ -1435,7 +1436,7 @@ Helper class to carry brand colours etc as per speakerdeck.com/u/csswizardry/p/b
 	}
 }
 
-@media screen and (max-width: 450px)
+@media screen and (max-width: 500px)
 {
 	.tinyScreen
 	{
