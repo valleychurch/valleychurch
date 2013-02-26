@@ -3,10 +3,16 @@
 <div class="pageContent wrap cf">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<?php if(get_field('page_style')) { ?>          
+		<?php if(get_field('page_css')) { ?>          
 			<style type="text/css">
-				<?php the_field('page_style'); ?>
+				<?php the_field('page_css'); ?>
 			</style>
+		<?php } ?>
+
+		<?php if (get_field('page_js')) { ?>
+			<script type="text/javascript">
+				<?php the_field('page_js'); ?>
+			</script>
 		<?php } ?>
 		
 		<?php

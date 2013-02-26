@@ -1,4 +1,4 @@
-/*
+﻿/*
 Theme Name: Valley Church
 Theme URI: http://valleychurch.eu
 Version: 1.5
@@ -124,7 +124,8 @@ table,
 form,
 pre,
 hr,
-.source
+.source,
+.btmmargin
 {
 	margin-bottom: 16px;
 }
@@ -222,7 +223,7 @@ html
 	overflow-y: scroll;
 	font-size: 1em;
 	line-height: 1.5; /* A safe and comfortable default for body copy at any size. */
-	padding-bottom: 32px;
+	/*padding-bottom: 32px;*/
 }
 
 body
@@ -346,9 +347,7 @@ hr
 
 header
 {
-	margin: 0 0 8px 0;
 	background: #f1f1f1; /* this means that if the body has a bg (Wigan, 6HW) the header is still consistent */
-	padding: 4px 0 4px 0;
 }
 
 .headerTop
@@ -393,11 +392,7 @@ header
 .headerSocial
 {
 	font-size: 0;
-}
-
-.headerSocial img
-{
-	margin: 0 4px 0 0;
+	width: 182px;
 }
 
 .no-svg .icon img
@@ -408,6 +403,7 @@ header
 .icon
 {
 	float: left;
+	margin: 0 4px 0 0;
 }
 
 .no-svg .icon
@@ -447,7 +443,6 @@ header
 {
 	zoom: 1;
 	*display: inline;
-	margin: 0 0 0 2px;
 }
 
 .headerSearch input.field
@@ -522,13 +517,13 @@ header
 
 .headerMain
 {
-	padding: 4px;
+	padding: 8px 0;
 }
 
 .headerLogo
 {
 	font-size: 0;
-	margin: 7px 1px 6px;
+	margin: 6px 0 0 0;
 }
 
 .no-svg .headerLogo
@@ -802,39 +797,39 @@ select.touchdown
 .homeButton1
 {
 	width: 478px;
-	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner1_0.jpg');
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner1_0.jpg');
 	margin: 0 24px 0 0;
 	float: left;
 }
 
 .ie8 .homeButton1, .ie7 .homeButton1, .ie6 .homeButton1
 {
-	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner1ie.jpg');
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner1ie.jpg');
 }
 
 .homeButton2
 {
 	width: 227px;
-	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner2_0.jpg');
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner2_0.jpg');
 	margin: 0 24px 0 0;
 	float: left;
 }
 
 .ie8 .homeButton2, .ie7 .homeButton2, .ie6 .homeButton2
 {
-	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner2ie.jpg');
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner2ie.jpg');
 }
 
 .homeButton3
 {
 	width: 227px;
-	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner3_0.jpg');
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner3_0.jpg');
 	float: left;
 }
 
 .ie8 .homeButton3, .ie7 .homeButton3, .ie6 .homeButton3
 {
-	background-image: url('http://valleychurch.eu/wp-content/themes/valleychurch/images/home/homebanner3ie.jpg');
+	background-image: url('http://cdn.valleychurch.eu/images/home/homebanner3ie.jpg');
 }
 
 .homeBannerText
@@ -921,6 +916,7 @@ select.touchdown
 .pageMain
 {
 	background: #ffffff;
+	box-shadow: 0 1px 2px rgba(50, 50, 50, 0.08);
 }
 
 .pageTitle
@@ -1086,14 +1082,14 @@ small,
 a
 {
 	color: #006892;
-	white-space: pre;           /* CSS 2.0 */
-	white-space: pre-wrap;      /* CSS 2.1 */
-	white-space: pre-line;      /* CSS 3.0 */
-	white-space: -pre-wrap;     /* Opera 4-6 */
-	white-space: -o-pre-wrap;   /* Opera 7 */
-	white-space: -moz-pre-wrap; /* Mozilla */
-	white-space: -hp-pre-wrap;  /* HP Printers */
-	word-wrap: break-word;      /* IE 5+ */
+	/*white-space: pre;           /* CSS 2.0 */
+	/*white-space: pre-wrap;      /* CSS 2.1 */
+	/*white-space: pre-line;      /* CSS 3.0 */
+	/*white-space: -pre-wrap;     /* Opera 4-6 */
+	/*white-space: -o-pre-wrap;   /* Opera 7 */
+	/*white-space: -moz-pre-wrap; /* Mozilla */
+	/*white-space: -hp-pre-wrap;  /* HP Printers */
+	/*word-wrap: break-word;      /* IE 5+ */
 }
 
 a:hover

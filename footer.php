@@ -32,13 +32,7 @@
 	</div>
 </footer>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.32/responsiveslides.min.js"></script>
-<script type="text/javascript" src="<?php echo valleycdn(); ?>/js/jquery.touchdown.min.js"></script>
-<script type="text/javascript" src="<?php echo valleycdn(); ?>/js/jquery.fitvids.js"></script>
-
-<script type="text/javascript" src="<?php echo valleycdn(); ?>/js/site.js"></script>
-
+<!-- Google Analytics -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

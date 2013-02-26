@@ -7,17 +7,61 @@ function valleycdn() {
 	return $valleycdn;
 }
 
-//Custom WordPress login logo
-function my_custom_login_logo() {
-    echo '<style type="text/css">
-        h1 a { background-image:url('.get_bloginfo('template_directory').'/images/wp-login-logo.png) !important; }
+
+
+//Custom WordPress login
+function my_custom_login() {
+    echo
+   '<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+   	<style type="text/css">
+   		h1 a
+   		{
+   			background-image: url(http://cdn.valleychurch.eu/images/logo_white.svg) !important;
+   			background-size: 90% !important;
+   		}
+
+    	.no-svg h1 a
+    	{
+    		background-image: url(http://cdn.valleychurch.eu/images/wp-login-logo.png) !important;
+    	}
+
+    	body.login
+			{
+				background: #006689;
+				background: -moz-linear-gradient(top,  #00567c 0%, #006689 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00567c), color-stop(100%,#006689));
+				background: -webkit-linear-gradient(top,  #00567c 0%,#006689 100%);
+				background: -o-linear-gradient(top,  #00567c 0%,#006689 100%);
+				background: -ms-linear-gradient(top,  #00567c 0%,#006689 100%);
+				background: linear-gradient(to bottom,  #00567c 0%,#006689 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00567c", endColorstr="#006689",GradientType=0 );
+			}
+
+			.login form
+			{
+			  -webkit-box-shadow: rgba(60, 60, 60, 0.7) 0 4px 10px -1px;
+			  -moz-box-shadow: rgba(60, 60, 60, 0.7) 0 4px 10px -1px;
+			  box-shadow: rgba(60, 60, 60, 0.7) 0 4px 10px -1px;
+			}
+
+			.login #nav a, .login #backtoblog a
+			{
+			  text-shadow: none;
+			}
+
+			.login #nav a, .login #backtoblog a
+			{
+			  color: white !important;
+			}
     </style>';
 }
 
-add_action('login_head', 'my_custom_login_logo');
+add_action('login_head', 'my_custom_login');
 
 
 
+//Deregister jQuery
 wp_deregister_script('jquery');
 
 
