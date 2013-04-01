@@ -1,7 +1,7 @@
 ﻿/*
 Theme Name: Valley Church
 Theme URI: http://valleychurch.eu
-Version: 1.5
+Version: 1.6
 Author: Rick Butterfield
 */
 
@@ -154,12 +154,12 @@ textarea:focus
 
 .nomargin
 {
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px !important;
 }
 
 .nobtmmargin
 {
-	margin-bottom: 0px;
+	margin-bottom: 0px !important;
 }
 
 .wf-loading
@@ -231,7 +231,7 @@ body
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
-	background: #f1f1f1;
+	background: #f8f8f8 url('http://cdn.valleychurch.eu/images/bg.jpg');
 }
 
 .wrap
@@ -302,7 +302,6 @@ footer
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    margin: 16px 0 0 0;
     display: inline-block;
     text-decoration: none;
 }
@@ -339,6 +338,11 @@ hr
   width: 95%;
 }
 
+p:last-child
+{
+  margin-bottom: 0;
+}
+
 
 
 /*------------------------------------*\
@@ -347,7 +351,7 @@ hr
 
 header
 {
-	background: #f1f1f1; /* this means that if the body has a bg (Wigan, 6HW) the header is still consistent */
+	/*background: #f8f8f8; /*this means that if the body has a bg (Wigan, 6HW) the header is still consistent */
 }
 
 .headerTop
@@ -881,14 +885,15 @@ select.touchdown
 {
 	/*border: 1px solid #CCC;*/
 	margin-bottom: 24px;
-	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
 .eventsLeft
 {
 	width: 660px;
+	margin: 0 0 8px 0;
 }
 
 .eventsRight
@@ -905,6 +910,11 @@ select.touchdown
 {
 	width: 100%;
 	height: auto;
+}
+
+.calDesc
+{
+	margin: 0 0 16px 0;
 }
 
 .pageImage
@@ -927,6 +937,11 @@ select.touchdown
 .pageInfo
 {
 	margin-bottom: 16px;
+}
+
+.pageBody
+{
+  margin: 0 0 16px 0;
 }
 
 .pageBody img
@@ -1110,7 +1125,7 @@ a:active
 li > ul,
 li > ol
 {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
 /*--- QUOTES ---*/

@@ -30,7 +30,7 @@ get_header(); ?>
 							</a>
 						</h1>
 			      		<h2 class="pageInfo epsilon lite">
-							Posted by <?php the_author();?> on <?php the_time('F jS, Y') ?> in <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>
+							Posted by <?php the_author();?> on <?php the_time('F jS, Y') ?>
 						</h2>
 					</div>
 					<hr/>
@@ -55,7 +55,7 @@ get_header(); ?>
 
 	<?php else : ?>
 
-		<div class="pageContent wrap cf">
+		<div class="pageContent pageMain wrap cf">
 			<div class="paddedContent">
 				<h1>Sorry, the page you're looking for doesn't exist!</h1>
 				<p>You can either use the search below to find what you're looking for, or head back to the <a href="<?php bloginfo('url'); ?>">home page.</a></p>

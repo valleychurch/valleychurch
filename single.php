@@ -25,7 +25,7 @@ get_header(); ?>
       <div class="paddedContentNarrow">
 				<div class="pageTitle">
 					<h1 class="nobtmmargin"><?php the_title(); ?></h1>
-      		<h2 class="pageInfo epsilon lite">Posted in <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?> by <?php the_author();?> on <?php the_time('F jS, Y') ?></h2>
+      		<h2 class="pageInfo epsilon lite">Posted by <?php the_author();?> on <?php the_time('F jS, Y') ?></h2>
 				</div>
 				<hr/>
 				<div class="pageBody">

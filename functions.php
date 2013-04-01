@@ -175,15 +175,32 @@ add_theme_support('post-thumbnails');
 
 
 //Add custom css for TinyMCE
-add_editor_style('editor-style.css');
+add_editor_style('http://cdn.valleychurch.eu/editor-style.css');
 
 
 
 //Add TypeKit to TinyMCE
 add_filter("mce_external_plugins", "tomjn_mce_external_plugins");
 function tomjn_mce_external_plugins($plugin_array){
-	$plugin_array['typekit']  =  get_template_directory_uri().'/js/typekit.tinymce.js';
+	$plugin_array['typekit']  =  'http://cdn.valleychurch.eu/js/typekit.tinymce.js';
     return $plugin_array;
 }
+
+
+
+//Add featured images to RSS
+function featuredtoRSS($content) {
+	global $post;
+
+	if ( has_post_thumbnail( $post->ID ) ){
+		$content = '' . get_the_post_thumbnail( $post->ID, 'medium', array( 'style' => 'display: block;' ) ) . '' . $content;
+	}
+
+	return $content;
+}
+
+add_filter('the_excerpt_rss', 'featuredtoRSS');
+add_filter('the_content_feed', 'featuredtoRSS');
+
 
 ?>

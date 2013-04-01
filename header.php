@@ -56,11 +56,12 @@
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
-  <!-- Added JS // prefixfree, ResponsiveSlides, Touchdown, FitVids -->
+  <!-- Added JS // prefixfree, ResponsiveSlides, Touchdown, FitVids, Twitter (embeds) -->
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.32/responsiveslides.min.js"></script>
   <script type="text/javascript" src="<?php echo valleycdn(); ?>/js/jquery.touchdown.min.js"></script>
   <script type="text/javascript" src="<?php echo valleycdn(); ?>/js/jquery.fitvids.js"></script>
+  <!--<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
 
   <!-- Site JS -->
   <script type="text/javascript" src="<?php echo valleycdn(); ?>/js/site.js"></script>
