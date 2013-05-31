@@ -10,19 +10,19 @@
 	</div>
 	<div class="footerLinks floatRight cf">
 		<div class="headerSocial floatLeft cf">
-			<a class="icon facebook" href="http://facebook.com/wearevalleychurch" target="_blank">
+			<a class="social-icon facebook" href="http://facebook.com/wearevalleychurch" target="_blank">
 				<img src="<?php echo valleycdn(); ?>/images/icons/fb.svg" alt="Valley Church on Facebook" title="Valley Church on Facebook" width="32"/>
 			</a>
-			<a class="icon twitter" href="http://twitter.com/valley_church" target="_blank">
+			<a class="social-icon twitter" href="http://twitter.com/valley_church" target="_blank">
 				<img src="<?php echo valleycdn(); ?>/images/icons/twtr.svg" alt="Valley Church on Twitter" title="Valley Church on Twitter" width="32"/>
 			</a>
-			<a class="icon instagram" href="http://instagram.com/valley_church" target="_blank">
+			<a class="social-icon instagram" href="http://instagram.com/valley_church" target="_blank">
 				<img src="<?php echo valleycdn(); ?>/images/icons/ig.svg" alt="Valley Church on Instagram" title="Valley Church on Instagram" width="32"/>
 			</a>
-			<a class="icon rss" href="http://feeds.feedburner.com/ValleyChurchBlog" target="_blank">
+			<a class="social-icon rss" href="http://feeds.feedburner.com/ValleyChurchBlog" target="_blank">
 				<img src="<?php echo valleycdn(); ?>/images/icons/rss.svg" alt="Valley Blog RSS Feed" title="Valley Blog RSS Feed" width="32"/>
 			</a>
-			<a class="icon podcast" href="http://itunes.apple.com/gb/podcast/valley-church/id263000232" target="_blank">
+			<a class="social-icon podcast" href="http://itunes.apple.com/gb/podcast/valley-church/id263000232" target="_blank">
 				<img src="<?php echo valleycdn(); ?>/images/icons/podcast.svg" alt="Valley Church on iTunes" title="Valley Church on iTunes" width="32"/>
 			</a>
 		</div>
