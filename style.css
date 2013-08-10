@@ -157,7 +157,8 @@ textarea:focus
 	margin: 0px 0px 0px 0px !important;
 }
 
-.nobtmmargin
+.nobtmmargin,
+.no-margin-bottom
 {
 	margin-bottom: 0px !important;
 }
@@ -250,6 +251,23 @@ body
 .floatRight
 {
 	float: right;
+}
+
+.alignleft
+{
+	float: left;
+	margin: 0 16px 16px 0;
+}
+
+.alignright
+{
+	float: right;
+	margin: 0 0 16px 16px;
+}
+
+.wp-caption-text
+{
+	font-style: italic;
 }
 
 .paddedContent
@@ -1141,15 +1159,15 @@ q:after{ content:"’"; content:close-quote; }
 q q:before{ content: "“"; content: open-quote; }
 q q:after{ content: "”"; content: close-quote; }
 
-blockquote{ quotes: "“" "”"; }
+/*blockquote{ quotes: "“" "”"; }
 blockquote p:before{ content: "“"; content: open-quote; }
 blockquote p:after{ content: ""; content: no-close-quote; }
-blockquote p:last-of-type:after{ content: "”"; content: close-quote; }
+blockquote p:last-of-type:after{ content: "”"; content: close-quote; }*/
 
 blockquote
 {
 	margin: 10px 10px 24px 10px;
-	padding: 10px 10px 1px 10px;
+	padding: 10px 10px 10px 10px;
 	background: #F1F1F1;
 	border-left: 5px solid #222;
 	font-style: italic;

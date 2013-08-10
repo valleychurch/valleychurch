@@ -73,7 +73,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('cf'); ?>>
+<body <?php body_class('vc1 cf'); ?>>
 
 <header>
 	<div class="headerMain wrap cf">

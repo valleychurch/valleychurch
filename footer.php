@@ -6,7 +6,7 @@
 			&copy; <?php echo date("Y"); ?> Valley Church&mdash;Empowering A New Generation
 		</p>
 		<p class="nobtmmargin">
-			<a href="http://freemethodist.org.uk" target="_blank">A Free Methodist UK Church</a> / <a href="http://www.charity-commission.gov.uk/Showcharity/RegisterOfCharities/CharityWithoutPartB.aspx?RegisteredCharityNumber=1125080&SubsidiaryNumber=0" target="_blank">Registered Charity No. 1125080</a> / <a href="/privacy" title="Privacy Policy">Privacy &amp; Cookie Policy</a></p>
+			<a href="http://freemethodist.org.uk" target="_blank">A Free Methodist UK Church</a> / <a href="http://www.charitycommission.gov.uk/search-for-a-charity/?txt=1125080" target="_blank">Registered Charity No. 1125080</a> / <a href="/privacy" title="Privacy Policy">Privacy &amp; Cookie Policy</a></p>
 	</div>
 	<div class="footerLinks floatRight cf">
 		<div class="headerSocial floatLeft cf">
@@ -38,6 +38,7 @@
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-34521921-1']);
   _gaq.push(['_trackPageview']);
+  _gaq.push(['_setCustomVar', 1, 'Theme', 'Valley Church']);
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
