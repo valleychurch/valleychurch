@@ -43,7 +43,7 @@ get_header(); ?>
 	<div class="homeButton1">
 		<a href="/sundays">
 			<div class="homeBannerText">
-				<div class="homeBannerTextInner">Sunday Church <br class="tinyScreen"/><span class="zeta lite">10:30am, 2:30pm &amp; 6pm</span></div>
+				<div class="homeBannerTextInner">Sunday Services <br class="tinyScreen"/><span class="zeta lite">10:30am &amp; 6pm</span></div>
 			</div>
 		</a>
 	</div>

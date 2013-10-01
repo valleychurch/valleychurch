@@ -163,6 +163,33 @@ function create_my_post_types() {
 			'rewrite' => array( 'slug' => 'message', 'with_front' => false ),
 		)
 	);
+
+	register_post_type( 'connect',
+	    array(
+	      'labels' => array(
+	        'name' => __( 'Connect Groups' ),
+	        'singular_name' => __( 'Connect Group' ),
+	        'add_new' => _x('Add New', 'connect'),
+	            'add_new_item' => __('Add New Connect Group'),
+	            'edit_item' => __('Edit Connect Group'),
+	            'new_item' => __('New Connect Group'),
+	            'all_items' => __('All Connect Groups'),
+	            'view_item' => __('Connect Group'),
+	            'search_items' => __('Connect Groups'),
+	            'not_found' =>  __('No connect groups found'),
+	            'not_found_in_trash' => __('No connect groups found in Trash'), 
+	            'parent_item_colon' => '',
+	            'menu_name' => 'Connect Groups'
+	      ),
+	      'public' => true,
+	      'archive' => false,
+	      'publicly_queryable' => false,
+	      'exclude_from_search' => true,
+	      'menu_position' => 10,
+	      'rewrite' => array( 'slug' => 'connect', 'with_front' => false ),
+	      'suspports' => array( 'title', 'editor', 'revisions' ),
+	    )
+	  );
 }
 
 add_action( 'init', 'create_my_post_types' );
@@ -201,6 +228,37 @@ function featuredtoRSS($content) {
 
 add_filter('the_excerpt_rss', 'featuredtoRSS');
 add_filter('the_content_feed', 'featuredtoRSS');
+
+
+//Add connect groups to a select menu
+function ses_add_connect_list_to_contact_form ( $tag, $unused ) {  
+
+    if ( $tag['name'] != 'connect-list' )
+        return $tag;  
+  
+    $args = array (
+    	'posts_per_page' => 100,
+    	'post_type' => 'connect',
+    	'orderby' => 'title',
+    	'order' => 'ASC' );  
+
+    $connects = get_posts($args);  
+  
+    if ( ! $connects )  
+        return $tag;  
+  
+    foreach ( $connects as $group ) {  
+        $tag['raw_values'][] = $group->post_title;  
+        $tag['values'][] = $group->post_title;  
+        $tag['labels'][] = $group->post_title;  
+        $tag['pipes']->pipes[] = array ( 'before' => $group->post_title, 'after' => $group->post_title);  
+    }  
+  
+    return $tag;  
+}
+
+add_filter( 'wpcf7_form_tag', 'ses_add_connect_list_to_contact_form', 10, 2);
+
 
 
 ?>

@@ -969,7 +969,9 @@ select.touchdown
 	height: auto;
 }
 
-.pageBody input[type="text"], .pageBody textarea
+.pageBody input[type="text"],
+.pageBody input[type="email"],
+.pageBody textarea
 {
 	width: 100%;
 }

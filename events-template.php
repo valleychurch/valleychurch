@@ -74,10 +74,8 @@ get_header(); ?>
 				<h2 class="delta">Regular events</h2>
 
 				<h3 class="epsilon nobtmmargin"><a href="<?php bloginfo('url'); ?>/sunday">Sunday Church</a></h3>
-				<h4 class="zeta nobtmmargin">10:30am & 6pm</a></h4>
+				<h4 class="zeta nobtmmargin">10:30am &amp; 6pm</a></h4>
 				<p>Valley Centre, Fourfields, Bamber Bridge, Preston, PR5 6GS</p>
-				<h4 class="zeta nobtmmargin">2:30pm</h4>
-				<p>72 Mitchell Street, Wigan, WN5 9BY</p>
 
 				<h3 class="epsilon nobtmmargin"><a href="<?php bloginfo('url'); ?>/connect">Connect Groups</a></h3>
 				<p>Meeting all over the region on Tuesdays.</p>

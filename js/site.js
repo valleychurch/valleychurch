@@ -40,3 +40,20 @@ $(document).ready(function() {
   $('img[class^="wp-image-"], img[class*=" wp-image-"]').css('width', '100%');
 
 });
+
+function debounce(func, wait, immediate) {
+  var result;
+  var timeout = null;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) result = func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) result = func.apply(context, args);
+    return result;
+  };
+}
