@@ -73,7 +73,7 @@ get_header(); ?>
 			<div class="paddedContentNarrow">
 				<h2 class="delta">Regular events</h2>
 
-				<h3 class="epsilon nobtmmargin"><a href="<?php bloginfo('url'); ?>/sunday">Sunday Church</a></h3>
+				<h3 class="epsilon nobtmmargin"><a href="<?php bloginfo('url'); ?>/sundays">Sunday Church</a></h3>
 				<h4 class="zeta nobtmmargin">10:30am &amp; 6pm</a></h4>
 				<p>Valley Centre, Fourfields, Bamber Bridge, Preston, PR5 6GS</p>
 

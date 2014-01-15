@@ -75,6 +75,12 @@
 
 <body <?php body_class('vc1 cf'); ?>>
 
+<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+
 <header>
 	<div class="headerMain wrap cf">
 		<div class="headerLogo floatLeft">
